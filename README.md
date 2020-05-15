@@ -5,4 +5,6 @@ Kinetics simulator for virtual enzymology lessons. The video (`Additional_File_1
 
 -Two buttons to `Simulate` the reaction or `Reset` to the last state prior to the simulation. Pressing `Simulate` again stops the simulation.
 
--A panel (left) to change the parameters of the mechanism and follow the concentrations of reactants and products. Each reaction is given two or one kinetic constant. The value of each constant can be changed by clicking on it (i. e., `k_1`). *Warning: by default, concentrations are given in &micro;M, second- and higher-order constants must be presented in the corresponding units*.
+-A left panel to change the parameters of the mechanism and follow the concentrations of reactants and products. Each reaction is given two or one kinetic constant. The value of each constant can be changed by clicking on it (i. e., `k<sub>1</sub>`). *Warning: by default, concentrations are given in &micro;M, second- and higher-order constants must be presented in the corresponding units*. The concentration of each species is given below. For each species shown at the left with a unique color there is a graphical representation with a red rectangle and a number representation. Concentrations can be set by clicking on the rectangle or on the number. 
+
+-A right panel with a graphical representation of each concentration through time. The color of each species is the same as in the left panel. Clicking on the name of the species at the left panel copies a table with the concentration of that species through time to the clipboard.
