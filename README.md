@@ -9,4 +9,8 @@ Kinetics simulator for virtual enzymology lessons. The video (`Additional_File_1
 
 -A right panel with a graphical representation of each concentration through time. The color of each species is the same as in the left panel. Clicking on the name of the species at the left panel copies a table with the concentration of that species through time to the clipboard.
 
-Coupled reactions can be written together (i. e., `E+S=ES-E+P`) or separately (`E+S=ES; ES=E+P`). The example in the video contains a mechanism for an enzyme `E` acting on a substrate `S` and inhibited competitively by `I` (`E+S=ES-E+P; EI=E+I`).
+Coupled reactions can be written together (i. e., `E+S=ES-E+P`) or separately (`E+S=ES; ES-E+P`). The example in the video contains a mechanism for an enzyme `E` acting on a substrate `S` and inhibited competitively by `I` (`E+S=ES-E+P; EI=E+I`).
+
+This simulator should be considered work in progress. There are some experimental features that may not work well, like subscripts and superscripts. Thus, you can write something like `H2SO4` and the formula will show H<sub>2</sub>SO<sub>4</sub>. Monovalent cations and anions can be written with `.` and `,`, respectively. For instance, you can represent a proton with `H.`. This version has no mechanism to represent multivalent ions.
+
+
