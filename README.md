@@ -42,5 +42,7 @@ One relatively simple way to create a web page with a custom model would be:
 
 The idea is to have kinetic constants that allow a reasonable simulation while being compatible with K<sub>W</sub> = 10<sup>-14</sup>M<sup>2</sup> and K<sub>a</sub> = 10<sup>-4.5</sup> M (remember that the upper numbers have &micro;M as the basic unit for concentration).
 
-
+1. Open the development console of the browser. In most browsers, you can do that with `CTRL`+`SHIFT`+`I`. 
+1. At the console, type `frm.toString()`. The answer should be `"{"original":"H2O=H.+OH,;AcH=Ac,+H.","k":[{"r":{"id":"k0_p","pos":1,"conc":2e-10,"order":1,"units":"s<span class=\"super\">-1</span>"},"l":{"id":"k0_m","pos":1,"conc":1,"order":2,"units":"&micro;M<span class=\"super\">-1</span>s<span class=\"super\">-1</span>"}},{"r":{"id":"k1_p","pos":5,"conc":0}},{"r":{"id":"k2_p","pos":7,"conc":3.16,"order":1,"units":"s<span class=\"super\">-1</span>"},"l":{"id":"k2_m","pos":7,"conc":0.1,"order":2,"units":"&micro;M<span class=\"super\">-1</span>s<span class=\"super\">-1</span>"}}],"species":{"H2O":{"conc":55000000,"show":false},"H_dot_":{"conc":0,"show":true},"OH_com_":{"conc":0,"show":true},"AcH":{"conc":0,"show":true},"Ac_com_":{"conc":0,"show":true}}}"`.
+1. 
 
