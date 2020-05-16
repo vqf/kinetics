@@ -30,7 +30,12 @@ With this web page as a template, it is relatively easy to create customized pag
 One relatively simple way to create a web page with a custom model would be:
 
 1. Copy `kinetics.html` with another name into the same folder. In this example, it will be `buffer.html`.
-1. Set a model you are interested in showing. For instance, let us simulate an acetate buffer with `H2O=H.+OH,;AcH=Ac,+H.`. This will set four kinetic constants: k<sub>1</sub>, k<sub>-1</sub>, k<sub>3</sub> and k<sub>-3</sub>
+1. Set a model you are interested in showing. For instance, let us simulate an acetate buffer with `H2O=H.+OH,;AcH=Ac,+H.`. This will set four kinetic constants: k<sub>1</sub>, k<sub>-1</sub>, k<sub>3</sub> and k<sub>-3</sub>. Set the following values:
+  -k<sub>1</sub> = 2e-10
+  -k<sub>-1</sub> = 1
+  -k<sub>3</sub> = 3.16
+  -k<sub>-3</sub> = 0.1
+The idea is to have kinetic constants that allow a reasonable simulation while being compatible with K<sub>W</sub> = 10<sup>-14</sup>M<sup>2</sup> and K<sub>a</sub> = 10<sup>-4.5</sup> M (remember that the upper numbers have &micro;M as the basic unit for concentration).
 
 
 
