@@ -68,7 +68,7 @@ One relatively simple way to create a web page with a custom model would be:
 	  });
 	</script>
 ``` 
-1. In that place, paste the text you copied from the browser. There are two important things to remember: you need to remove the outer quotes if present (the text must begin with `{` and end with `}` and add a semicolon at the end.
+1. In its place, paste the text you copied from the browser. There are two important things to remember: you need to remove the outer quotes if present (the text must begin with `{` and end with `}` and add a semicolon at the end.
 
 ```
 	<script>
@@ -104,4 +104,4 @@ One relatively simple way to create a web page with a custom model would be:
 	  });
 	</script>
 ``` 
-1. Save 
+1. Save `buffer.html` and open it with the browser. If the developer console is still open, you can close it with `CTRL`+`SHIFT`+`I`.
