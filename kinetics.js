@@ -1,4 +1,7 @@
 var isKineticsLoaded = true;
+if (!(isFigAPILoaded === true)){
+	console.log("Warning, figAPI not loaded");
+}
 
 var fdata = [];
 

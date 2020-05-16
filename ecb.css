@@ -1,0 +1,286 @@
+h6{
+  clear: both;
+}
+div{
+  padding: 0em;
+}
+.axis{
+  stroke: black;
+  stroke-width: 1%;
+}
+
+.getrow{
+  width: 100%;
+  height: 80vh;
+  padding: 1em;
+  display: inline-block;
+  border-radius: 10px;
+  background-color: #eef2ff;
+}
+
+.clabel{
+  text-anchor: middle;
+  font-size: 0.3em;
+  alignment-baseline: central;
+}
+
+
+.legendLabel{
+  text-anchor: left;
+  font-size: 0.5em;
+  font-style: italic;
+  font-weight: bold;
+  alignment-baseline: central;
+}
+
+.line{
+  stroke: black;
+  stroke-width: 0.2;
+}
+
+.f2r{
+  stroke: black;
+  stroke-width: 0.1%;
+}
+
+.tmpline{
+  stroke: black;
+  fill: none;
+  stroke-width: 0.6%;
+  stroke-dasharray: 5,2;
+}
+
+.ctrline{
+  stroke: green;
+  fill: none;
+  stroke-width: 0.5%;
+  stroke-dasharray: 1,1;
+}
+
+.coordline{
+  stroke: black;
+  stroke-width: 0.4%;
+  stroke-dasharray: 2,1;
+}
+
+.coordlineg{
+  stroke: green;
+  stroke-width: 0.05%;
+  /*stroke-dasharray: 1,1;*/
+}
+.coordliner{
+  stroke: red;
+  stroke-width: 0.5%;
+  stroke-dasharray: 1,1;
+  z-index: 999;
+}
+
+.curve{
+  stroke: red;
+  fill: none;
+  stroke-width: 1%;
+}
+
+.fixedcurve{
+  stroke: red;
+  fill: none;
+  stroke-width: 1%;
+}
+
+.eline{
+  stroke: black;
+  fill: none;
+  stroke-width: 0.3%;
+}
+
+.isoline{
+  stroke: black;
+  fill: none;
+  stroke-width: 0.1%;
+}
+
+.isolines{
+  stroke: none;
+  opacity: 0.2;
+  stroke-width: 0.3%;
+}
+
+.isolines-4{
+  stroke: none;
+  fill: #0000ff;
+}
+
+.isolines-3{
+  stroke: none;
+  fill: #0000aa;
+}
+
+.isolines-2{
+  stroke: none;
+  fill: #000066;
+}
+
+.isolines-1{
+  stroke: none;
+  fill: #000022;
+}
+
+.isolines-5{
+  stroke: none;
+  fill: #0000aa;
+}
+
+.highlight{
+  stroke: red;
+  stroke-width: 0.5%;
+  fill: none;
+}
+
+.hg{
+  stroke: green;
+  stroke-width: 0.02%;
+  fill: none;
+  visibility: hidden;
+}
+
+.hideMe{
+  visibility: hidden;
+  display: none;
+}
+
+
+.showMe{
+  visibility: visible;
+  display: block;
+  position: absolute;
+  padding: 1em;
+  border-radius: 4px;
+  background-color: #ffaaaa;
+}
+
+.gHighlight{
+  stroke: green;
+  stroke-width: 0.2%;
+  fill: none;
+  pointer-events: all;
+}
+
+.axislabel{
+  font-size: 0.3em;
+  font-style: italic;
+  text-anchor: right;
+}
+
+.leftcol{
+  width: 50%;
+  float: left;
+}
+
+.rightcol{
+  width: 50%;
+  float: right;
+}
+
+.svgfig{
+  border: solid;
+  width: 95%;
+  max-height: calc(80vh - 7em);
+  border-radius: 10px;
+  float: left;
+  pointer-events: all;
+  user-select: none;
+}
+
+.figcontainer{
+  width: 50%;
+  float: left;
+  display: inline;
+}
+
+
+.super{
+  vertical-align: super;
+  font-size: 60%;
+}
+
+.sub{
+  vertical-align: sub;
+  font-size: 60%;
+}
+
+.adjsvgfig{
+  border: solid;
+  width: 96%;
+  margin: 2%;
+  border-radius: 10px;
+  float: left;
+  pointer-events: all;
+  user-select: none;
+}
+
+.fullsvgfig{
+  border: solid;
+  width: 70%;
+  margin: 2%;
+  border-radius: 10px;
+  float: left;
+  pointer-events: all;
+  user-select: none;
+}
+
+.toleft{
+  float: left;
+}
+.toright{
+  float: right;
+}
+
+.smallsvgfig{
+  border: solid;
+  width: 20%;
+  margin: 2%;
+  border-radius: 10px;
+  float: left;
+  pointer-events: all;
+  user-select: none;
+}
+
+
+.info{
+  font-size: 0.7vw;
+  padding: 1%;
+  margin: 2%;
+  width: 29%;
+  height: 5em;
+  /*border: solid thin;
+  border-radius: 5px;*/
+  display: inline;
+  overflow: visible;
+  float: left;
+}
+
+.footer {
+  width: 100%;
+  height: 10vh; /* Set the fixed height of the footer here */
+  border-radius: 10px;
+  background-color: #f5f5f5;
+}
+
+.rect {
+  width: 1em;
+  height: 1em;
+}
+
+
+#manipf1{
+  margin: 5%;
+  width: 40%;
+  float: left;
+}
+
+#zoomRect{
+  stroke: black;
+  stroke-width: 0.3%;
+  fill: none;
+  stroke-dasharray: 1,2;
+}
