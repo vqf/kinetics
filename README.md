@@ -21,7 +21,9 @@ This simulator should be considered work in progress. There are some experimenta
 
 # Settings for exercises
 
-With this web page as a template, it is relatively easy to create customized pages for exercises. However, given the inability of `javascript` to write something to disk, this version requires manually editing the file. Any plain-text editor, like `Notepad` or `Notepad++` can be used. The idea is to edit the starting javascript code to set the model and its parameters. It is important to know that the `kinetics.js` module uses a global object called `frm`. The relevant functions to manipulate this object are:
+With this web page as a template, it is relatively easy to create customized pages for exercises if you have some experience with javascript. However, given the inability of `javascript` to write something to disk, this version requires manually editing the file. This procedure can be vastly simplified if users find it important. 
+
+Any plain-text editor, like `Notepad` or `Notepad++` can be used. The idea is to edit the starting javascript code to set the model and its parameters. It is important to know that the `kinetics.js` module uses a global object called `frm`. The relevant functions to manipulate this object are:
 
 -`frm.fromString(jsonText)`, which reads a `JSON` representation of the model (`jsonText`) and enters it.
 -`frm.hideFormula()`, which hides the model.
@@ -36,14 +38,70 @@ One relatively simple way to create a web page with a custom model would be:
 1. Copy this text, it represents the model you just created.
 1. Open `buffer.html` in your favorite plain-text editor and locate the initial script:
     
+	``` 
 	<script>
 	  $(document).ready(function(){
 		$(".nosend").submit(function(e){ 
 			e.preventDefault();
 		});
 		$("#noscript").hide();
+		let model = {"original":"E+S=ES=E+P","k":[{"r":{"id":"k0_p","pos":3,"conc":0.1,"order":2,"units":"&micro;M<span class=\"super\">-1</span>s<span class=\"super\">-1</span>"},"l":{"id":"k0_m","pos":3,"conc":0.1,"order":1,"units":"s<span class=\"super\">-1</span>"}},{"r":{"id":"k1_p","pos":5,"conc":0.1,"order":1,"units":"s<span class=\"super\">-1</span>"},"l":{"id":"k1_m","pos":5,"conc":0.1,"order":2,"units":"&micro;M<span class=\"super\">-1</span>s<span class=\"super\">-1</span>"}}],"species":{"E":{"conc":0,"show":true},"S":{"conc":0,"show":true},"ES":{"conc":0,"show":true},"P":{"conc":0,"show":true}}};
+		frm.fromString(JSON.stringify(model));
 		setFig1();
 		setFig2();
 	  });
 	</script>
-1. 
+	```
+1. Remove the text to the right of `let model = `:
+
+```
+	<script>
+	  $(document).ready(function(){
+		$(".nosend").submit(function(e){ 
+			e.preventDefault();
+		});
+		$("#noscript").hide();
+		let model = 
+		frm.fromString(JSON.stringify(model));
+		setFig1();
+		setFig2();
+	  });
+	</script>
+``` 
+1. In that place, paste the text you copied from the browser. There are two important things to remember: you need to remove the outer quotes if present (the text must begin with `{` and end with `}` and add a semicolon at the end.
+
+```
+	<script>
+	  $(document).ready(function(){
+		$(".nosend").submit(function(e){ 
+			e.preventDefault();
+		});
+		$("#noscript").hide();
+		let model = {"original":"H2O=H.+OH,;AcH=Ac,+H.","k":[{"r":{"id":"k0_p","pos":1,"conc":2e-10,"order":1,"units":"s<span class=\"super\">-1</span>"},"l":{"id":"k0_m","pos":1,"conc":1,"order":2,"units":"&micro;M<span class=\"super\">-1</span>s<span class=\"super\">-1</span>"}},{"r":{"id":"k1_p","pos":5,"conc":0}},{"r":{"id":"k2_p","pos":7,"conc":3.16,"order":1,"units":"s<span class=\"super\">-1</span>"},"l":{"id":"k2_m","pos":7,"conc":0.1,"order":2,"units":"&micro;M<span class=\"super\">-1</span>s<span class=\"super\">-1</span>"}}],"species":{"H2O":{"conc":55000000,"show":false},"H_dot_":{"conc":0,"show":true},"OH_com_":{"conc":0,"show":true},"AcH":{"conc":0,"show":true},"Ac_com_":{"conc":0,"show":true}}};
+		frm.fromString(JSON.stringify(model));
+		setFig1();
+		setFig2();
+	  });
+	</script>
+``` 
+1. Optionally, you can add other commands before `setFig1();` to customize the appearance. For instance, you can hide the formula and the concentration of hydroxyanions with `frm.hideFormula(); frm.hide("OH,")`:
+
+```
+	<script>
+	  $(document).ready(function(){
+		$(".nosend").submit(function(e){ 
+			e.preventDefault();
+		});
+		$("#noscript").hide();
+		let model = {"original":"H2O=H.+OH,;AcH=Ac,+H.","k":[{"r":{"id":"k0_p","pos":1,"conc":2e-10,"order":1,"units":"s<span class=\"super\">-1</span>"},"l":{"id":"k0_m","pos":1,"conc":1,"order":2,"units":"&micro;M<span class=\"super\">-1</span>s<span class=\"super\">-1</span>"}},{"r":{"id":"k1_p","pos":5,"conc":0}},{"r":{"id":"k2_p","pos":7,"conc":3.16,"order":1,"units":"s<span class=\"super\">-1</span>"},"l":{"id":"k2_m","pos":7,"conc":0.1,"order":2,"units":"&micro;M<span class=\"super\">-1</span>s<span class=\"super\">-1</span>"}}],"species":{"H2O":{"conc":55000000,"show":false},"H_dot_":{"conc":0,"show":true},"OH_com_":{"conc":0,"show":true},"AcH":{"conc":0,"show":true},"Ac_com_":{"conc":0,"show":true}}};
+		frm.fromString(JSON.stringify(model));
+		
+		frm.hideFormula(); 
+		frm.hide("OH_com_");
+		
+		setFig1();
+		setFig2();
+	  });
+	</script>
+``` 
+1. Save 
