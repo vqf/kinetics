@@ -54,7 +54,7 @@ One relatively simple way to create a web page with a custom model would be:
 	```
 1. Remove the text to the right of `let model = `:
 
-```
+	```
 	<script>
 	  $(document).ready(function(){
 		$(".nosend").submit(function(e){ 
@@ -67,10 +67,10 @@ One relatively simple way to create a web page with a custom model would be:
 		setFig2();
 	  });
 	</script>
-``` 
+	``` 
 1. In its place, paste the text you copied from the browser. There are two important things to remember: you need to remove the outer quotes if present (the text must begin with `{` and end with `}` and add a semicolon at the end.
 
-```
+	```
 	<script>
 	  $(document).ready(function(){
 		$(".nosend").submit(function(e){ 
@@ -83,10 +83,10 @@ One relatively simple way to create a web page with a custom model would be:
 		setFig2();
 	  });
 	</script>
-``` 
+	``` 
 1. Optionally, you can add other commands before `setFig1();` to customize the appearance. For instance, you can hide the formula and the concentration of hydroxyanions with `frm.hideFormula(); frm.hide("OH_com_")` (`_com_` is the internal representation of the comma):
 
-```
+	```
 	<script>
 	  $(document).ready(function(){
 		$(".nosend").submit(function(e){ 
@@ -103,5 +103,5 @@ One relatively simple way to create a web page with a custom model would be:
 		setFig2();
 	  });
 	</script>
-``` 
+	``` 
 1. Save `buffer.html` and open it with the browser. If the developer console is still open, you can close it with `CTRL`+`SHIFT`+`I`.
