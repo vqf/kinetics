@@ -84,7 +84,7 @@ One relatively simple way to create a web page with a custom model would be:
 	  });
 	</script>
 ``` 
-1. Optionally, you can add other commands before `setFig1();` to customize the appearance. For instance, you can hide the formula and the concentration of hydroxyanions with `frm.hideFormula(); frm.hide("OH,")`:
+1. Optionally, you can add other commands before `setFig1();` to customize the appearance. For instance, you can hide the formula and the concentration of hydroxyanions with `frm.hideFormula(); frm.hide("OH_com_")` (`_com_` is the internal representation of the comma):
 
 ```
 	<script>
