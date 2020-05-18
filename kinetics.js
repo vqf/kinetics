@@ -1,7 +1,4 @@
 var isKineticsLoaded = true;
-if (!(isFigAPILoaded === true)){
-	console.log("Warning, figAPI not loaded");
-}
 
 var fdata = [];
 
@@ -124,6 +121,14 @@ class formula{
       this.species[sp[i]].vp = [];
       this.species[sp[i]].vm = [];
     }
+	for (let j = 0; j < this.k.length; j++){
+	  if ("r" in this.k[j]){
+		this.k[j].r.order = 0;
+	  }
+	  if ("l" in this.k[j]){
+		this.k[j].l.order = 0;
+	  }
+	}
   }
   _setVelExpr(){
     let nr = this.nr;
