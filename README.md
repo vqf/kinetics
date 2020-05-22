@@ -1,5 +1,7 @@
 # EKS
-Kinetics simulator for virtual enzymology lessons. To use, simply copy all the files to the same folder and open `kinetics.html` in any compatible browser. The video (`Additional_File_1.mp4`) shows an example of the workflow. Briefly, the interface consists of:
+Kinetics simulator for virtual enzymology lessons. Please, notice that the purpose of this tools is only educational. It will not yield exact solutions in many settings. It is the responsibility of the educator to choose the settings that will give meaningful answers.
+
+To use, simply copy all the files to the same folder and open `kinetics.html` in any compatible browser. The video (`Additional_File_1.mp4`) shows an example of the workflow. Briefly, the interface consists of:
 
 -A text box and a button (`Enter`) for mechanisms. A mechanism is made of reactions separated by semicolons. In a reaction, each side contains chemical symbols for reactants or products, possibly preceded by an integer, separated by `+`. Each side is separated by `=` if the reaction is considered reversible and `-` if it is considered irreversible (always to the right side). *Warning: in this version, the correct stoichiometry of the reaction is entirely up to the user.*
 
